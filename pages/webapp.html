@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Joke Generator - John B Web</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        #joke { margin: 20px; font-size: 1.5em; }
+        button { padding: 10px 20px; font-size: 1em; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="index.html">John B Web</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="scratch.html">Scratch Page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">AI Joke Generator</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <br><h1>AI-Powered Joke Generator</h1>
+        <p>Click if you dare!</p>
+        <div id="joke">Why don't skeletons fight each other? They don't have the guts!</div>
+        <button onclick="generateJoke()">Get Another Joke</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+       <br> &copy; 2024 John Bresciano (This Joke Generator was made in collaboration with ChatGPT 4o)
+    </footer>
+
+    <script>
+        const jokes = [
+            "Why don't skeletons fight each other? They don't have the guts!",
+            "Why did the scarecrow win an award? Because he was outstanding in his field!",
+            "What do you call fake spaghetti? An impasta!",
+            "Why did the bicycle fall over? It was two-tired!",
+            "I'm reading a book on anti-gravity. It's impossible to put down!",
+            "I only know 25 letters of the alphabet. I don't know y.",
+            "Why don't eggs tell jokes? They'd crack each other up.",
+            "I told my wife she was drawing her eyebrows too high. She looked surprised.",
+            "Why can't you give Elsa a balloon? Because she will let it go.",
+            "Did you hear about the restaurant on the moon? Great food, no atmosphere.",
+            "What do you call a fat psychic? A four-chin teller!",
+            "How do you make a tissue dance? You put a little boogie in it!"
+        ];
+
+        function generateJoke() {
+            const randomIndex = Math.floor(Math.random() * jokes.length);
+            document.getElementById('joke').innerText = jokes[randomIndex];
+        }
+    </script>
+</body>
+</html>

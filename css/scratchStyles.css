@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    font-family: 'Verdana', sans-serif;
+}
+
+h1, h2 {
+    color: #004080;
+}
+
+.place-card {
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.place-card:hover {
+    transform: scale(1.05);
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #002f5f;
+    color: white;
+    text-align: center;
+}
